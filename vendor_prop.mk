@@ -111,7 +111,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.spkr_prot.tx.sampling_rate=48000 \
     vendor.audio.volume.headset.gain.depcal=true \
     ro.config.media_vol_steps=25 \
-    ro.config.vc_call_vol_steps=11
+    ro.config.vc_call_vol_steps=11 \
+    af.resampler.quality=7
 
 # Audio dynamic feature flags
 PRODUCT_PROPERTY_OVERRIDES += \
