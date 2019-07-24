@@ -44,19 +44,11 @@ import android.util.Log;
 import com.oneplus.shit.settings.R;
 
 public class ShitPanelSettings extends PreferenceActivity {
-
     public static final String KEY_VIBSTRENGTH = "vib_strength";
 
     /*public static final String KEY_TAPTOWAKE_SWITCH = "taptowake";*/
 
-    public static final String KEY_SRGB_SWITCH = "srgb";
-    public static final String KEY_HBM_SWITCH = "hbm";
-    public static final String KEY_DCI_SWITCH = "dci";
-    public static final String KEY_NIGHT_SWITCH = "night";
-    public static final String KEY_ONEPLUS_SWITCH = "oneplus";
-    
     private VibratorStrengthPreference mVibratorStrength;
-    private TwoStatePreference mHBMModeSwitch;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,12 +59,6 @@ public class ShitPanelSettings extends PreferenceActivity {
         if (mVibratorStrength != null) {
             mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
         }
-
-        /*mTapToWakeSwitch = (TwoStatePreference) findPreference(KEY_TAPTOWAKE_SWITCH);
-        mTapToWakeSwitch.setOnPreferenceChangeListener(new TapToWakeSwitch());*/
-
-        mHBMModeSwitch = (TwoStatePreference) findPreference(KEY_HBM_SWITCH);
-        mHBMModeSwitch.setOnPreferenceChangeListener(new HBMModeSwitch());
-
-        }
+     
+    }
 }

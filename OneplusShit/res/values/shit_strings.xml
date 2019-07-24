@@ -166,6 +166,12 @@
     <!-- Device specific settings -->
     <string name="screen_off_gesture_settings_title">OnePlus Gestures</string>
 
+    <!-- OnePlus Panel Modes -->
+    <string name="panel_category_title">Panel modes</string>
+    <string name="panel_category_summary">Modes for panel color correction</string>
+    <string name="off_mode_title">Off</string>
+    <string name="tile_panel_mode">Panel modes</string>
+
     <!-- Kcal -->
     <string name="kcal_title">Display Calibration</string>
     <string name="kcal_summary">Display color calibration using KCAL</string>
@@ -194,12 +200,6 @@
     <string name="extreme_amoled">Extreme Amoled</string>
     <string name="warm_amoled">Warm Amoled</string>
     <string name="hybrid_mamba">Hybrid Mamba</string>
-
-    <!-- OnePlus Panel Modes -->
-    <string name="panel_category_title">Panel modes</string>
-    <string name="panel_category_summary">Modes for panel color correction</string>
-    <string name="off_mode_title">Off</string>
-    <string name="tile_panel_mode">Panel modes</string>
 
     <!-- Toast Text -->
     <string name="toast_ringer_vibrate">Vibrate</string>

@@ -50,4 +50,3 @@ public class KcalPresets {
         DisplayCalibration.setValueVal(scrValue[index]);
     }
 }
-

@@ -19,8 +19,6 @@ package com.oneplus.shit.settings;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.provider.Settings;
-import android.text.TextUtils;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -30,37 +28,13 @@ import android.preference.PreferenceManager;
 
 import com.oneplus.shit.settings.KernelControl;
 import com.oneplus.shit.settings.ScreenOffGesture;
-import com.oneplus.shit.settings.DCIModeSwitch;
-import com.oneplus.shit.settings.DisplayCalibration;
-import com.oneplus.shit.settings.HBMModeSwitch;
-import com.oneplus.shit.settings.SRGBModeSwitch;
-import com.oneplus.shit.settings.ShitPanelSettings;
-import com.oneplus.shit.settings.VibratorStrengthPreference ;
-import com.oneplus.shit.settings.utils.FileUtils;
 
 import java.io.File;
 
 public class Startup extends BroadcastReceiver {
 
-        private void restore(String file, boolean enabled) {
-        if (file == null) {
-            return;
-        }
-        if (enabled) {
-            FileUtils.writeValue(file, "1");
-        }
-    }
-
-    private void restore(String file, String value) {
-        if (file == null) {
-            return;
-        }
-        FileUtils.writeValue(file, value);
-    }
-
     @Override
     public void onReceive(final Context context, final Intent intent) {
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         final String action = intent.getAction();
             ButtonSettingsActivity.restoreState(context);
 
@@ -71,21 +45,8 @@ public class Startup extends BroadcastReceiver {
                 KernelControl.enableGestures(
                         screenOffGestureSharedPreferences.getBoolean(
                         ScreenOffGesture.PREF_GESTURE_ENABLE, true));
-        }
-      
-        boolean enabled = sharedPrefs.getBoolean(ShitPanelSettings.KEY_SRGB_SWITCH, false);
-        restore(SRGBModeSwitch.getFile(), enabled);
-        enabled = sharedPrefs.getBoolean(ShitPanelSettings.KEY_HBM_SWITCH, false);
-        restore(HBMModeSwitch.getFile(), enabled);
-        enabled = sharedPrefs.getBoolean(ShitPanelSettings.KEY_DCI_SWITCH, false);
-        restore(DCIModeSwitch.getFile(), enabled);
-        enabled = sharedPrefs.getBoolean(ShitPanelSettings.KEY_NIGHT_SWITCH, false);
-        restore(NightModeSwitch.getFile(), enabled);
-        enabled = sharedPrefs.getBoolean(ShitPanelSettings.KEY_ONEPLUS_SWITCH, false);
-        restore(OnePlusModeSwitch.getFile(), enabled);
-        VibratorStrengthPreference.restore(context);
-        DisplayCalibration.restore(context);
-   }
+         }
+    }
 
     private boolean getPreferenceBoolean(Context context, String key, boolean defaultValue) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
