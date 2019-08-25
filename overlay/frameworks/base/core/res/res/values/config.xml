@@ -1112,4 +1112,7 @@
         <item>org.microg.nlp</item>
     </string-array>
 
+    <!-- The maximum duration (in milliseconds) we expect a network transition to take -->
+    <integer name="config_networkTransitionTimeout">20000</integer>
+
 </resources>
