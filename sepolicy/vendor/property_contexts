@@ -7,3 +7,7 @@ vendor.oem.device.imeicache1           u:object_r:radio_prop:s0
 camera.on                              u:object_r:camera_prop:s0
 
 vendor.display.mode                    u:object_r:vendor_display_prop:s0
+# Spectrum
+persist.spectrum.profile               u:object_r:spectrum_prop:s0
+# Dirac
+persist.audio.dirac.                   u:object_r:dirac_prop:s0
