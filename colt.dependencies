@@ -1,0 +1,17 @@
+[
+  {
+    "repository": "ColtOS-Devices/android_kernel_oneplus_msm8998",
+    "target_path": "kernel/oneplus/msm8998",
+    "branch": "c10"
+  },
+  {
+    "repository": "ColtOS-Devices/android__vendor_oneplus",
+    "target_path": "vendor/oneplus",
+    "branch": "c10"
+  },  
+  {
+    "repository": "mukesh22584/device_oneplus_OneplusShit",
+    "target_path": "device/oneplus/OneplusShit",
+    "branch": "c10"
+  }  
+]
