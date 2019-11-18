@@ -501,6 +501,3 @@ PRODUCT_BOOT_JARS += \
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
-#inherit our OneplusShit
-$(call inherit-product, device/oneplus/OneplusShit/opshit.mk)
