@@ -201,6 +201,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.2-service.clearkey \
     android.hardware.drm@1.2-service.widevine
 
+# Doze mode
+PRODUCT_PACKAGES += \
+    OneplusDoze
+
 # OneplusParts
 PRODUCT_PACKAGES += \
     OneplusParts
