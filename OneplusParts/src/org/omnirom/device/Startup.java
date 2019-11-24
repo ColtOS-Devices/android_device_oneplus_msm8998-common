@@ -95,9 +95,6 @@ public class Startup extends BroadcastReceiver {
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_SRGB_SWITCH, false);
         restore(SRGBModeSwitch.getFile(), enabled);
 
-        enabled = sharedPrefs.getBoolean(GestureSettings.KEY_TAPTOWAKE_SWITCH, false);
-        restore(TapToWakeSwitch.getFile(), enabled);
-
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_SWAPKEYS_SWITCH, true);
         restore(SwapHwKeysSwitch.getFile(), enabled);
 

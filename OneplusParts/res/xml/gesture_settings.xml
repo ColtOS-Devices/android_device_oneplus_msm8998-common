@@ -15,11 +15,6 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SwitchPreference
-        android:key="taptowake"
-        android:summary="@string/taptowake_summary"
-        android:title="@string/taptowake_title" />
-
     <PreferenceCategory
         android:title="@string/category_circle_gesture">
 

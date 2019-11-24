@@ -42,7 +42,6 @@ import android.util.Log;
 public class GestureSettings extends PreferenceActivity implements
         Preference.OnPreferenceChangeListener {
 
-    public static final String KEY_TAPTOWAKE_SWITCH = "taptowake";
     public static final String KEY_DOUBLE_SWIPE_APP = "double_swipe_gesture_app";
     public static final String KEY_CIRCLE_APP = "circle_gesture_app";
     public static final String KEY_DOWN_ARROW_APP = "down_arrow_gesture_app";
@@ -65,7 +64,6 @@ public class GestureSettings extends PreferenceActivity implements
     public static final String DEVICE_GESTURE_MAPPING_8 = "device_gesture_mapping_8_0";
     public static final String DEVICE_GESTURE_MAPPING_9 = "device_gesture_mapping_9_0";
 
-    private TwoStatePreference mTapToWakeSwitch;
     private AppSelectListPreference mDoubleSwipeApp;
     private AppSelectListPreference mCircleApp;
     private AppSelectListPreference mDownArrowApp;
@@ -87,11 +85,6 @@ public class GestureSettings extends PreferenceActivity implements
         ListView lv = getListView();
         lv.setDivider(new ColorDrawable(Color.TRANSPARENT));
         lv.setDividerHeight(0);
-
-        mTapToWakeSwitch = (TwoStatePreference) findPreference(KEY_TAPTOWAKE_SWITCH);
-        mTapToWakeSwitch.setEnabled(TapToWakeSwitch.isSupported());
-        mTapToWakeSwitch.setChecked(TapToWakeSwitch.isCurrentlyEnabled(this));
-        mTapToWakeSwitch.setOnPreferenceChangeListener(new TapToWakeSwitch());
 
         mDoubleSwipeApp = (AppSelectListPreference) findPreference(KEY_DOUBLE_SWIPE_APP);
         mDoubleSwipeApp.setEnabled(isGestureSupported(KEY_DOUBLE_SWIPE_APP));
