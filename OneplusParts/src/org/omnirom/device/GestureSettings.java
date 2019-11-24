@@ -42,7 +42,6 @@ import android.util.Log;
 public class GestureSettings extends PreferenceActivity implements
         Preference.OnPreferenceChangeListener {
 
-    public static final String KEY_PROXI_SWITCH = "proxi";
     public static final String KEY_TAPTOWAKE_SWITCH = "taptowake";
     public static final String KEY_DOUBLE_SWIPE_APP = "double_swipe_gesture_app";
     public static final String KEY_CIRCLE_APP = "circle_gesture_app";
@@ -66,7 +65,6 @@ public class GestureSettings extends PreferenceActivity implements
     public static final String DEVICE_GESTURE_MAPPING_8 = "device_gesture_mapping_8_0";
     public static final String DEVICE_GESTURE_MAPPING_9 = "device_gesture_mapping_9_0";
 
-    private TwoStatePreference mProxiSwitch;
     private TwoStatePreference mTapToWakeSwitch;
     private AppSelectListPreference mDoubleSwipeApp;
     private AppSelectListPreference mCircleApp;
@@ -89,10 +87,6 @@ public class GestureSettings extends PreferenceActivity implements
         ListView lv = getListView();
         lv.setDivider(new ColorDrawable(Color.TRANSPARENT));
         lv.setDividerHeight(0);
-
-        mProxiSwitch = (TwoStatePreference) findPreference(KEY_PROXI_SWITCH);
-        mProxiSwitch.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.DEVICE_PROXI_CHECK_ENABLED, 1) != 0);
 
         mTapToWakeSwitch = (TwoStatePreference) findPreference(KEY_TAPTOWAKE_SWITCH);
         mTapToWakeSwitch.setEnabled(TapToWakeSwitch.isSupported());
@@ -173,12 +167,7 @@ public class GestureSettings extends PreferenceActivity implements
     }
 
     @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mProxiSwitch) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.DEVICE_PROXI_CHECK_ENABLED, mProxiSwitch.isChecked() ? 1 : 0);
-            return true;
-        }
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {        
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
