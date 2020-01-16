@@ -652,4 +652,54 @@
 
     <!-- Whether device supports an alt. ambient display -->
     <bool name="config_alt_ambient_display">true</bool>
+ 
+    <!-- Whether device ignores the RSSNR signal implementation -->
+    <bool name="config_ignoreRssnrSignalLevel">true</bool>
+
+    <!-- Whether the always on display mode is available. -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
+    <!-- Control whether the always on display mode is enabled by default. This value will be used
+         during initialization when the setting is still null. -->
+    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+    
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveBatteryLed">true</bool>
+
+    <!-- Does device supports fast charging -->
+    <bool name="config_FastChargingLedSupported">true</bool>
+
+    <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
+    <bool name="config_multiColorBatteryLed">true</bool>
+
+    <bool name="config_display_rat">false</bool>
+
+    <!-- Flag specifying whether VT should be available for carrier: independent of
+         carrier provisioning. If false: hard disabled. If true: then depends on carrier
+         provisioning, availability etc -->
+    <bool name="config_carrier_vt_available">true</bool>
+
+        <!-- Control the behavior when the user long presses the app switch button.
+            0 - Nothing
+            1 - Menu key
+            2 - Recent apps view in SystemUI
+            3 - Launch assist intent
+            4 - Voice Search
+            5 - In-app Search
+            6 - Launch camera
+            7 - Sleep
+            8 - Last app
+            9 - Toggle split screen
+         This needs to match the enums in
+         sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
+    -->
+    <integer name="config_longPressOnAppSwitchBehavior">1</integer>
+
+    <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
+    <bool name="config_allowAutoBrightnessWhileDozing">true</bool>
+
+    <!-- Specify custom blanking delay of the display -->
+    <integer name="config_screen_off_delay">0</integer>
+
+    <integer name="config_deviceLightCapabilities">107</integer>
 </resources>
