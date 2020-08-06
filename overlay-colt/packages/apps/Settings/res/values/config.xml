@@ -24,5 +24,8 @@
     
     <!-- Disable Battery health services as It's enable by default in our sources  -->
     <bool name="config_supportBatteryHealth">false</bool>
+    
+    <!-- Ultra Power Saving -->
+    <bool name="config_supportUltraPowerSaving">false</bool>
 
 </resources>
